@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hồ Cá</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #fff4e0;
+        }
+        h2 {
+            text-align: center;
+            color: #e76f51;
+            margin: 20px 10px;
+        }
+
+        #hoca {
+            position: relative;
+            height: 480px;
+            margin: 0 20px 30px;
+            background: linear-gradient(to bottom, #7fdbff, #2a7de1);
+            border: 5px solid white;
+            border-radius: 16px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+            overflow: hidden;
+        }
+
+        #cat {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 40px;
+            background-color: #f2d49b;
+            border-top: 4px solid #d9b26f;
+        }
+
+        #hoca img {
+            position: absolute;
+            height: auto;
+        }
+        .ca {
+            left: -25%;
+            animation: boi 20s linear infinite;
+        }
+        @keyframes boi {
+            from { left: -25%; }
+            to   { left: 100%; }
+        }
+        #camap  { width: 200px; top: 40px;  animation-duration: 18s; }
+        #cavang { width: 160px; top: 150px; animation-duration: 24s; animation-delay: -8s; }
+        #camo   { width: 160px; top: 240px; animation-duration: 30s; animation-delay: -15s; }
+        #rua    { width: 130px; top: 320px; animation-duration: 40s; animation-delay: -25s; }
+
+        .tholan {
+            width: 90px;
+            animation: troi 5s ease-in-out infinite alternate;
+        }
+        @keyframes troi {
+            from { top: 120px; }
+            to   { top: 200px; }
+        }
+        #tholan1 { left: 12%; }
+        #tholan2 { left: 48%; animation-delay: -2s; }
+        #tholan3 { left: 82%; animation-delay: -4s; }
+
+        .bong {
+            position: absolute;
+            bottom: 40px;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.5);
+            border: 2px solid white;
+            animation: noi 6s linear infinite;
+        }
+        @keyframes noi {
+            from { bottom: 40px;  opacity: 1; }
+            to   { bottom: 480px; opacity: 0; }
+        }
+        #b1 { left: 8%; }
+        #b2 { left: 22%; animation-delay: 2s; width: 24px; height: 24px; }
+        #b3 { left: 38%; animation-delay: 4s; width: 12px; height: 12px; }
+        #b4 { left: 55%; animation-delay: 1s; }
+        #b5 { left: 70%; animation-delay: 3s; width: 28px; height: 28px; }
+        #b6 { left: 90%; animation-delay: 5s; width: 14px; height: 14px; }
+
+        .rong {
+            position: absolute;
+            bottom: 40px;
+            width: 18px;
+            background-color: seagreen;
+            border-radius: 50% 50% 0 0;
+            transform-origin: bottom;
+            animation: lac 3s ease-in-out infinite alternate;
+        }
+        @keyframes lac {
+            from { rotate: -8deg; }
+            to   { rotate: 8deg; }
+        }
+        #r1 { left: 5%;  height: 120px; }
+        #r2 { left: 8%;  height: 90px;  animation-delay: -1s; }
+        #r3 { left: 47%; height: 140px; animation-delay: -2s; }
+        #r4 { left: 88%; height: 100px; }
+        #r5 { left: 91%; height: 130px; animation-delay: -1s; }
+    </style>
+</head>
+<body>
+    <h2>Bùi Nguyễn Hà Anh - 52.01.104.003</h2>
+
+    <div id="hoca">
+        <img class="ca" id="camap"  src="shark.png"          alt="Cá mập">
+        <img class="ca" id="cavang" src="goldFishSchool.png" alt="Đàn cá vàng">
+        <img class="ca" id="camo"   src="faintSchool.png"    alt="Đàn cá mờ">
+        <img class="ca" id="rua"    src="turtle.png"         alt="Rùa">
+
+        <img class="tholan" id="tholan1" src="diver1.png" alt="Thợ lặn 1">
+        <img class="tholan" id="tholan2" src="diver2.png" alt="Thợ lặn 2">
+        <img class="tholan" id="tholan3" src="diver3.png" alt="Thợ lặn 3">
+
+        <div class="bong" id="b1"></div>
+        <div class="bong" id="b2"></div>
+        <div class="bong" id="b3"></div>
+        <div class="bong" id="b4"></div>
+        <div class="bong" id="b5"></div>
+        <div class="bong" id="b6"></div>
+
+        <div class="rong" id="r1"></div>
+        <div class="rong" id="r2"></div>
+        <div class="rong" id="r3"></div>
+        <div class="rong" id="r4"></div>
+        <div class="rong" id="r5"></div>
+        <div id="cat"></div>
+    </div>
+</body>
+</html>
