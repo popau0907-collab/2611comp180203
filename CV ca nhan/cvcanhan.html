@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Bùi Nguyễn Hà Anh</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        :root {
+            --tim: #5b3fd1;
+            --tim-dam: #3b2796;
+            --tim-nhat: #efeaff;
+            --vang: #ffb627;
+            --hong: #ff6f91;
+        }
+        body {
+            background: #f6f3ff;
+            color: #2d2a3e;
+            line-height: 1.6;
+            padding: 24px 16px 40px;
+        }
+        .cv {
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        .banner {
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 28px;
+            padding: 36px 40px;
+            border-radius: 20px;
+            color: white;
+            background: linear-gradient(120deg, var(--tim-dam), var(--tim) 60%, #8a6bff);
+            overflow: hidden;
+            box-shadow: 0 10px 26px rgba(91, 63, 209, 0.35);
+        }
+        .banner::after {
+            content: "";
+            position: absolute;
+            right: -60px;
+            top: -60px;
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            background: var(--vang);
+            opacity: 0.9;
+        }
+        .banner::before {
+            content: "";
+            position: absolute;
+            right: 120px;
+            bottom: -70px;
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            background: var(--hong);
+            opacity: 0.8;
+        }
+        .banner > * {
+            position: relative;
+            z-index: 1;
+        }
+        .anh {
+            flex-shrink: 0;
+            position: relative;
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            border: 5px solid white;
+            background: var(--vang);
+            color: var(--tim-dam);
+            font-size: 42px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+        .anh img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .banner h1 {
+            font-size: 34px;
+            line-height: 1.2;
+        }
+        .banner .nganh {
+            margin-top: 6px;
+            font-size: 16px;
+            opacity: 0.95;
+        }
+        .banner .nut {
+            display: inline-block;
+            margin: 14px 8px 0 0;
+            padding: 6px 18px;
+            border-radius: 20px;
+            background: white;
+            color: var(--tim-dam);
+            font-weight: 700;
+            font-size: 14px;
+            text-decoration: none;
+            transition: 0.25s;
+        }
+        .banner .nut:hover {
+            background: var(--vang);
+        }
+
+        .luoi {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 22px;
+            margin-top: 22px;
+            align-items: start;
+        }
+        .cot {
+            display: flex;
+            flex-direction: column;
+            gap: 22px;
+        }
+        .the {
+            background: white;
+            border-radius: 16px;
+            padding: 22px 24px;
+            box-shadow: 0 4px 14px rgba(91, 63, 209, 0.1);
+            border-top: 5px solid var(--mau, var(--tim));
+        }
+        .the h2 {
+            font-size: 17px;
+            margin-bottom: 12px;
+            color: var(--mau, var(--tim));
+        }
+        .m-vang { --mau: #e69a00; }
+        .m-hong { --mau: #e0456c; }
+        .m-tim  { --mau: var(--tim); }
+
+        ul {
+            padding-left: 18px;
+        }
+        li {
+            margin-bottom: 4px;
+            font-size: 14.5px;
+        }
+        .ds {
+            list-style: none;
+            padding: 0;
+        }
+        .ds li {
+            padding: 6px 0;
+            border-bottom: 1px dashed #e3def7;
+            word-break: break-word;
+        }
+        .ds li:last-child {
+            border-bottom: none;
+        }
+        .ds b {
+            color: var(--tim-dam);
+        }
+        a {
+            color: var(--tim);
+            font-weight: 600;
+        }
+        a:hover {
+            color: var(--hong);
+        }
+        p {
+            font-size: 14.5px;
+        }
+
+        .chip {
+            display: inline-block;
+            padding: 4px 13px;
+            margin: 3px 4px 3px 0;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 700;
+            background: var(--tim-nhat);
+            color: var(--tim-dam);
+        }
+        .chip.v { background: #fff1d1; color: #8a5a00; }
+        .chip.h { background: #ffe0e8; color: #a1264a; }
+
+        .moc h3 {
+            font-size: 15.5px;
+        }
+        .moc .ngay {
+            font-size: 13px;
+            color: #e69a00;
+            font-weight: 700;
+        }
+        .moc p {
+            margin-top: 4px;
+        }
+        .moc + .moc {
+            margin-top: 14px;
+        }
+
+        .cuon {
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            font-size: 14px;
+            border: 1px solid #e3def7;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+            border-bottom: 1px solid #e3def7;
+        }
+        tr:last-child td {
+            border-bottom: none;
+        }
+        th {
+            background: var(--tim);
+            color: white;
+        }
+        td:first-child {
+            background: var(--tim-nhat);
+            color: var(--tim-dam);
+            font-weight: 700;
+        }
+        td.mon:hover {
+            background: #fff1d1;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 28px;
+            font-size: 13.5px;
+            color: #7a7494;
+        }
+
+        @media (max-width: 760px) {
+            .banner {
+                flex-direction: column;
+                text-align: center;
+                padding: 30px 20px;
+            }
+            .luoi {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cv">
+
+        <header class="banner">
+            <div class="anh">
+                BA
+                <img src="anh dai dien.jpeg" alt="Bùi Nguyễn Hà Anh" onerror="this.remove()">
+            </div>
+            <div>
+                <h1>Bùi Nguyễn Hà Anh</h1>
+                <p class="nganh">Sinh viên Công nghệ Thông tin - ĐH Sư phạm TP.HCM</p>
+                <a class="nut" href="https://github.com/popau0907-collab" target="_blank">GitHub</a>
+                <a class="nut" href="https://www.facebook.com/annieee189" target="_blank">Facebook</a>
+            </div>
+        </header>
+
+        <div class="luoi">
+            <div class="cot">
+                <section class="the m-vang">
+                    <h2>Liên hệ</h2>
+                    <ul class="ds">
+                        <li><b>Ngày sinh:</b> 18/09/2008</li>
+                        <li><b>Email:</b> <a href="mailto:popau0907gmail.com">popau0907gmail.com</a></li>
+                    </ul>
+                </section>
+
+                <section class="the m-tim">
+                    <h2>Kỹ năng</h2>
+                    <span class="chip">C++</span>
+                    <span class="chip">HTML</span>
+                    <span class="chip">CSS</span>
+                    <span class="chip">JavaScript</span>
+                    <span class="chip">Bootstrap</span>
+                    <span class="chip">Git / GitHub</span>
+                    <p style="margin-top:10px;">
+                        <span class="chip v">Tư duy logic</span>
+                        <span class="chip v">Tự học</span>
+                        <span class="chip v">Làm việc nhóm</span>
+                    </p>
+                </section>
+
+                <section class="the m-hong">
+                    <h2>Sở thích</h2>
+                    <span class="chip h">🎤 Ca hát</span>
+                    <span class="chip h">🎞️ Xem phim</span>
+                    <span class="chip h">🎧 Nghe nhạc</span>
+                </section>
+            </div>
+
+            <!-- Cột phải -->
+            <div class="cot">
+                <section class="the m-tim">
+                    <h2>Giới thiệu</h2>
+                    <p>Mình là sinh viên năm nhất ngành Công nghệ Thông tin, yêu thích lập trình và xây dựng trang web. Mình đang học C++, HTML, CSS, JavaScript và luôn tìm hiểu thêm công nghệ mới, hướng tới mục tiêu trở thành lập trình viên Web.</p>
+                </section>
+
+                <section class="the m-vang">
+                    <h2>Học vấn</h2>
+                    <div class="moc">
+                        <h3>Trường Đại học Sư phạm TP. Hồ Chí Minh</h3>
+                        <div class="ngay">2026 - Hiện tại · Công nghệ Thông tin</div>
+                        <p>Học phần tiêu biểu: Lập trình cơ bản (C++), Thiết kế Web, Cơ sở toán trong CNTT.</p>
+                    </div>
+                </section>
+
+                <section class="the m-hong">
+                    <h2>Thời khóa biểu</h2>
+                    <div class="cuon">
+                        <table>
+                            <tr><th>Thứ</th><th>Môn 1</th><th>Môn 2</th></tr>
+                            <tr><td>Thứ 2</td><td class="mon">Thiết kế website</td><td class="mon">Lập trình cơ bản</td></tr>
+                            <tr><td>Thứ 3</td><td class="mon">Triết học Mác-Lênin</td><td class="mon">Cơ sở toán trong CNTT</td></tr>
+                            <tr><td>Thứ 4</td><td class="mon" colspan="2">Lập trình cơ bản</td></tr>
+                            <tr><td>Thứ 5</td><td class="mon">Cơ sở toán trong CNTT</td><td class="mon">Toán rời rạc</td></tr>
+                            <tr><td>Thứ 6</td><td class="mon" colspan="2">Giáo dục thể chất</td></tr>
+                        </table>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <footer>&copy; 2026 Bản quyền thuộc về Bùi Nguyễn Hà Anh</footer>
+    </div>
+</body>
+</html>
